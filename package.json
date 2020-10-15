@@ -1,14 +1,15 @@
 {
-  "name": "discord-bot",
+  "name": "mather",
+  "private": true,
   "version": "1.0.0",
   "description": "Discord Bot with Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo Test"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
-    "url": "d"
+    "url": "https://github.com/dipamsen/Mather-Discord"
   },
   "keywords": [
     "discord"
