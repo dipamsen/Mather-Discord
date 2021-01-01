@@ -1,7 +1,6 @@
-const Discord = require("discord.js");
-const client = new Discord.Client()
+const { Client } = require("discord.js");
+const client = new Client()
 const Math = require("mathjs")
-
 require("dotenv").config();
 
 let botToken = process.env.DISCORD_BOT_TOKEN
@@ -23,7 +22,7 @@ client.on("message", (message) => {
     try {
       let res = Math.evaluate(eqn.join(" "))
       message.channel.send(res)
-    } catch { }
+    } catch (e) { }
   }
 })
 
