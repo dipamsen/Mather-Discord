@@ -2,10 +2,16 @@ const { Client } = require("discord.js");
 const client = new Client()
 const Math = require("mathjs")
 require("dotenv").config();
+const app = require("express")()
 
 let botToken = process.env.DISCORD_BOT_TOKEN
 let serverID = process.env.SERVER_ID
 let channelID = process.env.CHANNEL_ID
+
+app.get('/', (req, res) => {
+  console.log("FU")
+  res.send("HEEEY")
+})
 
 client.once('ready', () => {
   console.log("READY.")
@@ -13,6 +19,7 @@ client.once('ready', () => {
 
 client.login(botToken);
 
+app.listen(process.env.PORT, () => console.log("ready"))
 
 client.on("message", (message) => {
   if (message.author.id == client.user.id) return
