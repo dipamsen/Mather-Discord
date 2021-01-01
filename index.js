@@ -27,6 +27,6 @@ client.on("message", (message) => {
   }
 })
 
-client.on("messageReactionAdd", (reaction, user) => {
-  reaction.message.channel.send(reaction.emoji.name)
-})
+// client.on("messageReactionAdd", (reaction, user) => {
+//   reaction.message.channel.send(reaction.emoji.name)
+// })
